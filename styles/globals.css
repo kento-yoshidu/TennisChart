@@ -18,3 +18,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.wContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
