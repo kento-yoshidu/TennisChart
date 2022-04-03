@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const Header: React.VFC = () => (
-  <header className="wContainer border pb-2 flex flex-col md:flex-row justify-between items-center">
+  <header className="wContainer pb-2 flex flex-col md:flex-row justify-between items-center">
     <Image
       src="/images/logo.png"
       width={192}
