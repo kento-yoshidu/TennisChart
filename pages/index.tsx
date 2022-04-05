@@ -1,6 +1,17 @@
 import type { NextPage } from "next"
 import Header from "./components/Header"
 import Image from "next/image"
+import { client } from "../lib/client"
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blog" })
+
+  return {
+    props: {
+      blog: data.contents
+    }
+  }
+}
 
 const Home: NextPage = () => {
   return (
