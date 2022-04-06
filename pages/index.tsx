@@ -30,6 +30,7 @@ const Home: NextPage = () => {
               src="/images/hero.png"
               width={585}
               height={498}
+              alt="ヒーロー画像"
             />
           </div>
         </div>
