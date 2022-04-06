@@ -1,4 +1,3 @@
-import type { NextPage } from "next"
 import Header from "./components/Header"
 import Image from "next/image"
 import { client } from "../lib/client"
@@ -13,7 +12,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Home: NextPage = () => {
+const Home = ({ blog }: { blog: Blog[]}) => {
   return (
     <>
       <Header />
@@ -34,6 +33,16 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
+      </div>
+
+      <div className="wContainer">
+        <ul>
+          {blog.map((blog) => (
+            <li key={`key${blog.id}`}>
+              {blog.title}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )
