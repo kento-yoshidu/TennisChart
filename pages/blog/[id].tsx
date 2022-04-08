@@ -11,6 +11,8 @@ interface Props {
   defaultLocale?: string
 }
 
+import * as Styles from "../../styles/blog.module.scss"
+
 export const getStaticPaths =async () => {
   const data = await client.get({ endpoint: "blog" })
 
@@ -35,11 +37,12 @@ const Blog = ({ blog }: { blog: Blog }) => {
     <>
       <Header />
 
-      <main className="wContainer">
+      <main className="wContainer w-2/3">
         <div
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`
           }}
+          className={Styles.main}
         />
       </main>
     </>
