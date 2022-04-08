@@ -1,4 +1,5 @@
 import Header from "./components/Header"
+import Link from "next/link"
 import Image from "next/image"
 import { client } from "../lib/client"
 
@@ -36,10 +37,20 @@ const Home = ({ blog }: { blog: Blog[]}) => {
       </div>
 
       <div className="wContainer">
-        <ul>
+        <ul className="">
           {blog.map((blog) => (
-            <li key={`key${blog.id}`}>
-              {blog.title}
+            <li
+              className="flex flex-col mb-8"
+              key={`key${blog.id}`}
+            >
+              <Link href={`/blog/${blog.id}`}>
+                <a className="text-2xl duration-200 hover:text-textGreen">
+                  {blog.title}
+                </a>
+              </Link>
+
+              <time>{blog.update}</time>
+              <time>{blog.createdAt}</time>
             </li>
           ))}
         </ul>
