@@ -4,6 +4,7 @@ import { client } from "../lib/client"
 
 import Layout from "./components/Layout"
 import Title from "./components/Title"
+import AboutItem from "./components/AboutItem"
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" })
@@ -46,12 +47,134 @@ const Home = ({ blog }: { blog: Blog[]}) => {
             alt="背景画像"
           />
 
-          <Title
-            title="私について"
-            subTitle="ABOUT"
+          <div className="relative wContainer py-16 z-10">
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+
+            <div className="flex flex-col md:flex-row justify-center py-16">
+              <AboutItem
+                path="/images/about-1.png"
+                title="01"
+                text="10"
+                width={184}
+                height={157}
+              />
+              <AboutItem
+                path="/images/about-1.png"
+                title="01"
+                text="10"
+                width={184}
+                height={157}
+              />
+              <AboutItem
+                path="/images/about-1.png"
+                title="01"
+                text="10"
+                width={184}
+                height={157}
+              />
+            </div>
+
+          </div>
+        </section>
+
+        <section className="relative">
+          <Image
+            src="/images/bg-skills.png"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+            alt="背景画像"
           />
 
-          <p className="relative z-10">jgar</p>
+          <div className="relative wContainer z-10">
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+            <Title
+              title="私について"
+              subTitle="ABOUT"
+            />
+          </div>
         </section>
 
         <section className="wContainer">
