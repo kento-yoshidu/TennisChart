@@ -1,6 +1,7 @@
 import React from "react"
-import Header from "../components/Header"
 import { client } from "../../lib/client"
+
+import Layout from "../components/Layout"
 
 interface Props {
   params: {
@@ -35,16 +36,16 @@ export const getStaticProps = async (content: Props) => {
 const Blog = ({ blog }: { blog: Blog }) => {
   return (
     <>
-      <Header />
-
-      <main className="wContainer w-2/3">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${blog.body}`
-          }}
-          className={Styles.main}
-        />
-      </main>
+      <Layout>
+        <main className="wContainer w-2/3">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${blog.body}`
+            }}
+            className={Styles.main}
+          />
+        </main>
+      </Layout>
     </>
   )
 }
