@@ -3,6 +3,7 @@ import Image from "next/image"
 import { client } from "../lib/client"
 
 import Layout from "./components/Layout"
+import Title from "./components/Title"
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" })
@@ -36,7 +37,24 @@ const Home = ({ blog }: { blog: Blog[]}) => {
           </div>
         </div>
 
-        <div className="wContainer">
+        <section className="relative">
+          <Image
+            src="/images/bg-about.png"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+            alt="背景画像"
+          />
+
+          <Title
+            title="私について"
+            subTitle="ABOUT"
+          />
+
+          <p className="relative z-10">jgar</p>
+        </section>
+
+        <section className="wContainer">
           <ul className="">
             {blog.map((blog) => (
               <li
@@ -54,7 +72,7 @@ const Home = ({ blog }: { blog: Blog[]}) => {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       </Layout>
     </>
   )
