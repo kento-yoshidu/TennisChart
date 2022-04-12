@@ -9,7 +9,10 @@ module.exports = {
         textBlack: "#384359",
         textGreen: "#008c8d",
         bgBlack: "#262c3a",
-        bgGreen: "#6bc2c3",
+        bgGreen: {
+          800: "#7cd3d4",
+          900: "#6bc2c3"
+        },
         line: "#c5eaea"
       }
     }
