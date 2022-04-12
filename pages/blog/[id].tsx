@@ -1,7 +1,9 @@
 import React from "react"
+import Head from "next/head"
 import { client } from "../../lib/client"
 
 import Layout from "../components/Layout"
+import Button from "../components/Button"
 
 interface Props {
   params: {
@@ -14,7 +16,7 @@ interface Props {
 
 import * as Styles from "../../styles/blog.module.scss"
 
-export const getStaticPaths =async () => {
+export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: "blog" })
 
   const paths = data.contents.map((content: Blog) => `/blog/${content.id}`)
@@ -33,21 +35,28 @@ export const getStaticProps = async (content: Props) => {
   }
 }
 
-const Blog = ({ blog }: { blog: Blog }) => {
-  return (
-    <>
-      <Layout>
-        <main className="wContainer w-2/3">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${blog.body}`
-            }}
-            className={Styles.main}
-          />
-        </main>
-      </Layout>
-    </>
-  )
-}
+const Blog = ({ blog }: { blog: Blog }) => (
+  <>
+    <Head>
+      <title>{blog.title} | SamplePage</title>
+    </Head>
+
+    <Layout>
+      <main className="wContainer w-11/12 md:w-1/2 py-8 md:py-16">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blog.body}`
+          }}
+          className={`${Styles.main} pb-12`}
+        />
+
+        <Button
+          path="/"
+        />
+      </main>
+
+    </Layout>
+  </>
+)
 
 export default Blog
