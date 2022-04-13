@@ -15,7 +15,7 @@ const Header: React.VFC = () => (
       </a>
     </Link>
 
-    <ul className="flex w-5/6 justify-between md:w-1/3 text-textGreen font-semibold md:text-2xl">
+    <ul className="flex justify-between w-5/6 md:w-1/3 md:pr-8 text-textGreen font-semibold md:text-2xl">
       <li>
         <Link href="/">
           <a>
