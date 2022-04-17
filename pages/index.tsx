@@ -43,6 +43,7 @@ const Home = ({ blog }: { blog: Blog[] }) => (
       </div>
 
       <section className="relative">
+        gjapr
         <Image
           src="/images/bg-about.png"
           layout="fill"
@@ -57,25 +58,25 @@ const Home = ({ blog }: { blog: Blog[] }) => (
             subTitle="ABOUT"
           />
 
-          <div className="flex flex-col md:flex-row justify-center py-16">
+          <div className="flex flex-col md:flex-row justify-center mx-auto w-11/12 py-16">
             <AboutItem
               path="/images/about-1.png"
-              title="01"
-              text="10"
+              title="こん棒粘土"
+              text="嬉しいことに、人間工学に基づいた沖縄県はツインテールを搭載した麦わら帽子に発明されるらしい。消費税が螺旋にうねった羊羹に取りすがる。消費税が螺旋にうねった羊羹に取りすがる消費税が螺旋にうねった羊羹に取りすがった。"
               width={184}
               height={157}
             />
             <AboutItem
-              path="/images/about-1.png"
-              title="01"
-              text="10"
+              path="/images/about-2.png"
+              title="金ピカ増援"
+              text="素晴らしい眼鏡は筋肉痛の独自規格である江戸川コナンと相性がよくないのであった。完璧な石灰は脳のようにも見えると推定されるし、更に悪いことに、黒鉛のごときお兄さんが黒船のような家庭の主婦などであった。"
               width={184}
               height={157}
             />
             <AboutItem
-              path="/images/about-1.png"
+              path="/images/about-3.png"
               title="01"
-              text="10"
+              text="古来、100円ショップの一部である落語は赤毛の処女を構成することがある。肉汁がコンパスを殺すまで、羽ペンが開発されると言っていた。群れをなした筋肉痛は筆箱の親戚である恐山を見るのである。今の時代、シャーロック・ホームズは兵隊なのだ見込みである。"
               width={184}
               height={157}
             />
@@ -92,7 +93,7 @@ const Home = ({ blog }: { blog: Blog[] }) => (
           alt="背景画像"
         />
 
-        <div className="relative wContainer z-10">
+        <div className="relative wContainer z-10 ">
           <Title
             title="私について"
             subTitle="ABOUT"
