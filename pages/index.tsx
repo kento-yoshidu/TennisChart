@@ -1,4 +1,5 @@
 import Chart from "../components/charts"
+import Footer from "../components/footer"
 
 const Home = () => (
   <>
@@ -13,6 +14,8 @@ const Home = () => (
     <p>なお、真の目的は私のフロントエンド技術の向上です。思い付きで始めただけなので、サイト構成は大きく変わる可能性があります。</p>
 
     <Chart />
+
+    <Footer />
   </>
 )
 
