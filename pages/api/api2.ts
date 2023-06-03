@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { data1 } from '../../data/data'
+import { data2 } from '../../data/data'
 
 export default function handler(
   req: NextApiRequest,
@@ -8,8 +8,8 @@ export default function handler(
 ) {
   try {
     setTimeout(() => {
-      res.status(200).json({ data1 })
-    }, 2000)
+      res.status(200).json({ data2 })
+    }, 8000)
   } catch(e) {
     res.status(500)
   }

@@ -1,4 +1,121 @@
-export const data = [
+export const data1 = [
+  {
+    year: "2003",
+    "Roger Federer": 1,
+    "other": 3
+  },
+  {
+    year: "2004",
+    "Roger Federer": 3,
+    "other": 1
+  },
+  {
+    year: "2005",
+    "Roger Federer": 2,
+    "Rafael Nadal": 1,
+    "other": 1
+  },
+  {
+    year: "2006",
+    "Roger Federer": 3,
+    "Rafael Nadal": 1,
+  },
+  {
+    year: "2007",
+    "Roger Federer": 3,
+    "Rafael Nadal": 1,
+  },
+  {
+    year: "2008",
+    "Roger Federer": 1,
+    "Rafael Nadal": 2,
+    "Novak Dokovic": 1,
+  },
+  {
+    year: "2009",
+    "Roger Federer": 2,
+    "Rafael Nadal": 1,
+    "other": 1
+  },
+  {
+    year: "2010",
+    "Roger Federer": 1,
+    "Rafael Nadal": 3,
+  },
+  {
+    year: "2011",
+    "Rafael Nadal": 1,
+    "Novak Dokovic": 3,
+  },
+  {
+    year: "2012",
+    "Roger Federer": 1,
+    "Rafael Nadal": 1,
+    "Novak Dokovic": 1,
+    "Andy Murray": 1,
+  },
+  {
+    year: "2013",
+    "Rafael Nadal": 2,
+    "Novak Dokovic": 1,
+    "Andy Murray": 1,
+  },
+  {
+    year: "2014",
+    "Rafael Nadal": 1,
+    "Novak Dokovic": 2,
+    "other": 1
+  },
+  {
+    year: "2015",
+    "Novak Dokovic": 3,
+    "other": 1
+  },
+  {
+    year: "2016",
+    "Novak Dokovic": 2,
+    "Andy Murray": 1,
+    "other": 1
+  },
+  {
+    year: "2017",
+    "Roger Federer": 2,
+    "Rafael Nadal": 2,
+  },
+  {
+    year: "2018",
+    "Roger Federer": 1,
+    "Rafael Nadal": 1,
+    "Novak Dokovic": 2,
+  },
+  {
+    year: "2019",
+    "Rafael Nadal": 2,
+    "Novak Dokovic": 2,
+  },
+  {
+    year: "2020",
+    "Rafael Nadal": 1,
+    "Novak Dokovic": 1,
+    "other": 1
+  },
+  {
+    year: "2021",
+    "Novak Dokovic": 3,
+    "other": 1
+  },
+  {
+    year: "2022",
+    "Rafael Nadal": 2,
+    "Novak Dokovic": 1,
+    "other": 1
+  },
+  {
+    year: "2023",
+    "Novak Dokovic": 1,
+  },
+]
+export const data2 = [
   {
     name: '2003',
     "Roger Federer": 2,
@@ -154,123 +271,5 @@ export const data = [
     name: '2023',
     "Novak Dokovic": 1,
     "other": 13
-  },
-]
-
-export const data2 = [
-  {
-    year: "2003",
-    "Roger Federer": 1,
-    "other": 3
-  },
-  {
-    year: "2004",
-    "Roger Federer": 3,
-    "other": 1
-  },
-  {
-    year: "2005",
-    "Roger Federer": 2,
-    "Rafael Nadal": 1,
-    "other": 1
-  },
-  {
-    year: "2006",
-    "Roger Federer": 3,
-    "Rafael Nadal": 1,
-  },
-  {
-    year: "2007",
-    "Roger Federer": 3,
-    "Rafael Nadal": 1,
-  },
-  {
-    year: "2008",
-    "Roger Federer": 1,
-    "Rafael Nadal": 2,
-    "Novak Dokovic": 1,
-  },
-  {
-    year: "2009",
-    "Roger Federer": 2,
-    "Rafael Nadal": 1,
-    "other": 1
-  },
-  {
-    year: "2010",
-    "Roger Federer": 1,
-    "Rafael Nadal": 3,
-  },
-  {
-    year: "2011",
-    "Rafael Nadal": 1,
-    "Novak Dokovic": 3,
-  },
-  {
-    year: "2012",
-    "Roger Federer": 1,
-    "Rafael Nadal": 1,
-    "Novak Dokovic": 1,
-    "Andy Murray": 1,
-  },
-  {
-    year: "2013",
-    "Rafael Nadal": 2,
-    "Novak Dokovic": 1,
-    "Andy Murray": 1,
-  },
-  {
-    year: "2014",
-    "Rafael Nadal": 1,
-    "Novak Dokovic": 2,
-    "other": 1
-  },
-  {
-    year: "2015",
-    "Novak Dokovic": 3,
-    "other": 1
-  },
-  {
-    year: "2016",
-    "Novak Dokovic": 2,
-    "Andy Murray": 1,
-    "other": 1
-  },
-  {
-    year: "2017",
-    "Roger Federer": 2,
-    "Rafael Nadal": 2,
-  },
-  {
-    year: "2018",
-    "Roger Federer": 1,
-    "Rafael Nadal": 1,
-    "Novak Dokovic": 2,
-  },
-  {
-    year: "2019",
-    "Rafael Nadal": 2,
-    "Novak Dokovic": 2,
-  },
-  {
-    year: "2020",
-    "Rafael Nadal": 1,
-    "Novak Dokovic": 1,
-    "other": 1
-  },
-  {
-    year: "2021",
-    "Novak Dokovic": 3,
-    "other": 1
-  },
-  {
-    year: "2022",
-    "Rafael Nadal": 2,
-    "Novak Dokovic": 1,
-    "other": 1
-  },
-  {
-    year: "2023",
-    "Novak Dokovic": 1,
   },
 ]

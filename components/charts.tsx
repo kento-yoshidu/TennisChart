@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useQuery } from 'react-query';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
-import { data, data2 } from '../data/data'
+// import { data, data2 } from '../data/data'
 
 import styles from "../styles/chart.module.css"
 
+const fetchData = async () => {
+  const res = await fetch("/api/api1")
+  return res.json()
+}
+
 const Chart = () => {
+  const data1 = useQuery("data1", fetchData)
+
+  if (data1.isLoading) {
+    return <span>Loading...</span>
+  }
+
   return (
     <>
       <section className={styles.wrapper}>
         <h2>GSの支配率</h2>
 
-        <p>2004年から2022年まで、BIG4以外の選手が2つのGSを優勝したことはありません。つまり、20年近くに渡って、年間3つ以上のGSをBIG4が占めていました。</p>
+        <p>2004年から2022年まで、年間でBIG4以外の選手が複数のGSを優勝したことはありません。つまり、20年近くに渡って、年間3つ以上のGSタイトルをBIG4が占めていたということです。</p>
 
         <p>2020年はウィンブルドンの開催はありませんでした。</p>
 
         <ResponsiveContainer width="60%" aspect={4.0/3.0}>
           <BarChart
-            data={data2}
+            data={data1.data.data1}
             margin={{
               top: 20,
               right: 30,
@@ -43,14 +55,13 @@ const Chart = () => {
         </ResponsiveContainer>
       </section>
 
+      {/*
       <section className={styles.wrapper}>
         <h2>GS、MSの支配率</h2>
 
-        {/* <p>こうしてみると、思った以上にフェデラーがMSを優勝できていないことがわかりますね */}
-
         <ResponsiveContainer width="60%" aspect={4.0/3.0}>
           <BarChart
-            data={data}
+            data={data2.data.data2}
             margin={{
               top: 20,
               right: 30,
@@ -71,6 +82,7 @@ const Chart = () => {
           </BarChart>
         </ResponsiveContainer>
       </section>
+          */}
     </>
   );
 }
