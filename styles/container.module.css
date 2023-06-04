@@ -1,0 +1,11 @@
+.container {
+  border: 1px solid red;
+  max-width: var(--max-width);
+  margin: 30px auto;
+}
+
+@media (width < 768px) {
+  .container {
+    width: 95%;
+  }
+}
