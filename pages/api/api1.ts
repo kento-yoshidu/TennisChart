@@ -9,7 +9,7 @@ export default function handler(
   try {
     setTimeout(() => {
       res.status(200).json({ data1 })
-    }, 5000)
+    }, 1000)
   } catch(e) {
     res.status(500)
   }

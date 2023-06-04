@@ -1,10 +1,8 @@
 import Link from "next/link"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 const Home = () => (
-  <>
-    <h1>Tennis Chart</h1>
-
+  <Layout>
     <p>2022年、ロジャーフェデラーの引退。2023年、ラファエルナダルが全仏オープンを欠場し来季での引退の可能性があると発言。いよいよテニスBig4の時代が終わりを告げようとしています（正確にはフェデラーが引退した時点で終わっていますが、2022年もジョコビッチが勝ちを重ねていたため、いまいちその実感が湧きません）。</p>
 
     <p>このサイトでは、BIG4という存在がいかに男子テニス界を支配していたかをグラフを用いて見てみます。データは基本的にATP公式から引っ張ってきているので正しいはずです。</p>
@@ -12,9 +10,7 @@ const Home = () => (
     <p>なお、真の目的は私のフロントエンド技術の向上です。思い付きで始めただけなので、サイト構成は大きく変わる可能性があります。</p>
 
     <Link href="/page1/">Page1</Link>
-
-    <Footer />
-  </>
+  </Layout>
 )
 
 export default Home

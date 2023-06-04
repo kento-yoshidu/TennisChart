@@ -14,25 +14,24 @@ const Chart = () => {
 
   return (
     <>
-      <h1>test</h1>
       <section className={styles.wrapper}>
         {data1.isLoading
           ? (
             <div>loading..</div>
           ) : (
-            <ResponsiveContainer width="100%" aspect={4.0/3.0}>
+            <ResponsiveContainer aspect={4.0/3.0}>
               <BarChart
                 data={data1.data.data1}
                 margin={{
                   top: 20,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
+                  right: 40,
+                  left: 0,
+                  bottom: 20,
                 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-
                 <XAxis dataKey="year" />
+
                 <YAxis />
 
                 <Tooltip />
