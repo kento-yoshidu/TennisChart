@@ -1,4 +1,4 @@
-import Chart from "../components/charts"
+import Link from "next/link"
 import Footer from "../components/footer"
 
 const Home = () => (
@@ -9,11 +9,9 @@ const Home = () => (
 
     <p>このサイトでは、BIG4という存在がいかに男子テニス界を支配していたかをグラフを用いて見てみます。データは基本的にATP公式から引っ張ってきているので正しいはずです。</p>
 
-    <p>好きな選手はフェデラー、ティエム、メドベージェフです。</p>
-
     <p>なお、真の目的は私のフロントエンド技術の向上です。思い付きで始めただけなので、サイト構成は大きく変わる可能性があります。</p>
 
-    <Chart />
+    <Link href="/page1/">Page1</Link>
 
     <Footer />
   </>
