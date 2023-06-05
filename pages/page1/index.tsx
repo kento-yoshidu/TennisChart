@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 
 import styles from "../../styles/styles.module.css"
 import PageHeader from "../../components/page-header"
+import Meta from "../../components/meta"
 
 const Page1 = () => {
   const fetchData = async () => {
@@ -16,9 +17,14 @@ const Page1 = () => {
 
   return (
     <>
+      <Meta
+        pageTitle="1. GSタイトルの支配率"
+        pageDesc="BIG4がどれだけGSタイトルを独占していたかを振り返ります。"
+      />
+
       <Layout>
         <PageHeader
-          title="GSタイトルの支配率"
+          title="1. GSタイトルの支配率"
           post="2023-06-03"
           update="2023-06-05"
         />
