@@ -3,7 +3,10 @@ import { useRouter } from "next/router"
 
 import styles from "../styles/header.module.css"
 
+import { siteMetaData } from "../lib/constants"
+
 const Header = () => {
+  const { siteTitle } = siteMetaData
   const { pathname } = useRouter()
 
   return (
@@ -11,9 +14,9 @@ const Header = () => {
       <div className={styles.inner}>
         <h1 className={styles.title}>
           {pathname !== "/" ? (
-              <Link href="/">Tennis Chart（仮）</Link>
+              <Link href="/">{siteTitle}</Link>
           ) : (
-            "Tennis Chart（仮）"
+            <>{siteTitle}</>
           )}
         </h1>
 

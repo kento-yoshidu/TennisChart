@@ -1,42 +1,49 @@
 import Layout from "../components/layout"
+import Meta from "../components/meta"
 
 const About = () => {
   return (
-    <Layout>
-      <h2>⚡ 開発ロードマップ</h2>
+    <>
+      <Meta
+        pageTitle="About"
+      />
 
-      <br />
+      <Layout>
+        <h2>⚡ 開発ロードマップ</h2>
 
-      <h3>⬜ Rechartsでチャートを書くのに慣れる</h3>
+        <br />
 
-      <br />
+        <h3>⬜ Rechartsでチャートを書くのに慣れる</h3>
 
-      <h3>✅ データをJSON形式で用意して表示させる</h3>
+        <br />
 
-      <br />
+        <h3>✅ データをJSON形式で用意して表示させる</h3>
 
-      <h3>✅ Next.jsのAPIサーバーを立ててデータを返す</h3>
+        <br />
 
-      <br />
+        <h3>✅ Next.jsのAPIサーバーを立ててデータを返す</h3>
 
-      <h3>⬜ テーブル設計を考える</h3>
+        <br />
 
-      <br />
+        <h3>⬜ テーブル設計を考える</h3>
 
-      <h3>⬜ actix-webに慣れる</h3>
+        <br />
 
-      <br />
+        <h3>⬜ actix-webに慣れる</h3>
 
-      <h3>⬜ sqlxでデータ取得してAPIサーバーを構築する</h3>
+        <br />
 
-      <br />
+        <h3>⬜ sqlxでデータ取得してAPIサーバーを構築する</h3>
 
-      <h3>⬜ DBはどうする?</h3>
+        <br />
 
-      <br />
+        <h3>⬜ DBはどうする?</h3>
 
-      <h3>⬜ actix-webをAWSにデプロイする</h3>
-    </Layout>
+        <br />
+
+        <h3>⬜ actix-webをAWSにデプロイする</h3>
+      </Layout>
+    </>
   )
 }
 

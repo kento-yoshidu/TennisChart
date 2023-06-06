@@ -7,7 +7,6 @@ import Meta from "../components/meta"
 const Home = () => (
   <>
     <Meta
-      pageTitle="HOME"
       pageDesc="tennis chart"
     />
 
