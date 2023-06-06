@@ -16,6 +16,8 @@ const Header = () => {
             "Tennis Chart（仮）"
           )}
         </h1>
+
+        <Link href="about">About</Link>
       </div>
     </header>
   )
