@@ -5,27 +5,29 @@ import Layout from "../../components/layout"
 import PageHeader from '../../components/page-header'
 import Meta from '../../components/meta'
 
-const Page2 = () => {
+const Page3 = () => {
   const fetchData = async () => {
     const res = await fetch("/api/api2")
     return res.json()
   }
 
-  const { data, isLoading } = useQuery("data2", fetchData)
+  const { data, isLoading } = useQuery("data3", fetchData)
 
   return (
   <>
     <Meta
-      pageTitle="2. GS決勝進出"
+      pageTitle="3. GS、MSタイトルの支配率"
       pageDesc="description"
     />
 
     <Layout>
       <PageHeader
-        title="2. GS決勝進出"
-        post="2023年6月11日"
-        update="23023年6月11日"
+        title="2. GS、MSタイトルの支配率"
+        post="2023年6月4日"
+        update="23023年6月5日"
       />
+
+      <p>MSが入っている分、支配率は少し下がっています。</p>
 
       {isLoading
         ? (
@@ -38,4 +40,4 @@ const Page2 = () => {
   )
 }
 
-export default Page2
+export default Page3
