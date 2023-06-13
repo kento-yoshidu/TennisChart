@@ -25,7 +25,13 @@ const Home = () => (
               <Link href="/page1/">1. GSタイトルの支配率</Link>
             </li>
             <li>
-              <Link href="/page2/">2. GS、MSタイトルの支配率</Link>
+              <Link href="/page2/">2. GS決勝進出</Link>
+            </li>
+            <li>
+              <Link href="/page3/">3. GS、MSタイトルの支配率</Link>
+            </li>
+            <li>
+              <Link href="/actix/">xx. Actix Webからデータ取得</Link>
             </li>
           </ul>
         </nav>
