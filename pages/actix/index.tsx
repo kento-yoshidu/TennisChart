@@ -7,9 +7,15 @@ import Meta from '../../components/meta'
 
 import styles from "../../styles/styles.module.css"
 
+type User = {
+  id: number,
+  name: string
+}
+
 const PageActix = () => {
   const fetchData = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/test`)
+    // const res = await fetch(`http://localhost:8888/test`)
     return res.json()
   }
 
@@ -30,13 +36,19 @@ const PageActix = () => {
           update="23023年6月13日"
         />
 
+        <h2>選手一覧</h2>
+
         {isLoading
           ? (
             <p>Loading...</p>
           ): (
             <>
-              <p>OK!</p>
-              <p>{data.name}</p>
+              {data.map((d: User) => (
+                <div key={d.id}>
+                  <p>{d.id}</p>
+                  <p>{d.name}</p>
+                </div>
+              ))}
             </>
           )}
         </main>
