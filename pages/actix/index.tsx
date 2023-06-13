@@ -14,7 +14,7 @@ type User = {
 
 const PageActix = () => {
   const fetchData = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/tes`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/test`)
     // const res = await fetch(`http://localhost:8888/test`)
     return res.json()
   }
