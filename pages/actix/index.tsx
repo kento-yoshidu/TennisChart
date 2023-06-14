@@ -21,8 +21,6 @@ const PageActix = () => {
 
   const { data , isLoading, error } = useQuery("test", fetchData)
 
-  console.log(data)
-
   return (
   <>
     <Meta
@@ -34,11 +32,11 @@ const PageActix = () => {
       <main className={styles.main}>
         <PageHeader
           title="xx. Actix Webからデータ取得"
-          post="2023年6月13日"
-          update="2023年6月13日"
+          post="2023年6月14日"
+          update="2023年6月14日"
         />
 
-        <h2>選手一覧</h2>
+        <h2>GSのタイトル</h2>
 
         {error && <p>エラーが発生しました。</p>}
 
