@@ -6,6 +6,7 @@ import styles from "../styles/chart.module.css"
 import type { DataType1 } from '../data/data'
 
 const Chart = ({ data }: { data: DataType1[] }) => {
+  console.log(data)
   return (
     <div className={styles.wrapper}>
       <ResponsiveContainer aspect={4.5/2.8}>
@@ -27,10 +28,10 @@ const Chart = ({ data }: { data: DataType1[] }) => {
 
           <Legend />
 
-          <Bar dataKey="Roger Federer" stackId="a" fill="#32cd32" />
-          <Bar dataKey="Rafael Nadal" stackId="a" fill="#a0522d" />
-          <Bar dataKey="Novak Dokovic" stackId="a" fill="#1e90ff" />
-          <Bar dataKey="Andy Murray" stackId="a" fill="#9400d3" />
+          <Bar dataKey="roger_federer" stackId="a" fill="#32cd32" />
+          <Bar dataKey="rafael_nadal" stackId="a" fill="#a0522d" />
+          <Bar dataKey="novak_dokovic" stackId="a" fill="#1e90ff" />
+          <Bar dataKey="andy_murray" stackId="a" fill="#9400d3" />
           <Bar dataKey="other" stackId="a" fill="#dddddd" />
         </BarChart>
       </ResponsiveContainer>

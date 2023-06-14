@@ -14,12 +14,14 @@ type User = {
 
 const PageActix = () => {
   const fetchData = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/test`)
-    // const res = await fetch(`http://localhost:8888/test`)
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/test`)
+    const res = await fetch(`http://localhost:8888/gs1`)
     return res.json()
   }
 
   const { data , isLoading, error } = useQuery("test", fetchData)
+
+  console.log(data)
 
   return (
   <>
@@ -38,22 +40,19 @@ const PageActix = () => {
 
         <h2>選手一覧</h2>
 
-        {error && <p>データ取得に失敗しました。少し時間を置いてから再度アクセスお願いします。</p>}
+        {error && <p>エラーが発生しました。</p>}
 
         {!error && (
           <>
             {isLoading
               ? (
-                <p>Loading...</p>
-              ): (
                 <>
-                  {data.map((d: User) => (
-                    <div key={d.id}>
-                      <p>{d.id}</p>
-                      <p>{d.name}</p>
-                    </div>
-                  ))}
+                  <h3>データ取得中</h3>
+                  <p>開発期間中につき、Saasの無料プランを利用しています。</p>
+                  <p>サーバー立ち上げまで1分ほどかかります🙏</p>
                 </>
+              ): (
+                <Chart data={data} />
               )}
             </>
           )}
