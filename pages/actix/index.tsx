@@ -14,8 +14,8 @@ type User = {
 
 const PageActix = () => {
   const fetchData = async () => {
-    // const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/test`)
-    const res = await fetch(`http://localhost:8888/gs1`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/gs1`)
+    // const res = await fetch(`http://localhost:8888/gs1`)
     return res.json()
   }
 
@@ -45,9 +45,9 @@ const PageActix = () => {
             {isLoading
               ? (
                 <>
-                  <h3>データ取得中</h3>
+                  <h3>データ取得中...</h3>
                   <p>開発期間中につき、Saasの無料プランを利用しています。</p>
-                  <p>サーバー立ち上げまで1分ほどかかります🙏</p>
+                  <p>サーバー立ち上げまで1分ほどかかります。もう少々お待ちください🙏</p>
                 </>
               ): (
                 <Chart data={data} />
