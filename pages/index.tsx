@@ -30,9 +30,6 @@ const Home = () => (
             <li>
               <Link href="/page3/">3. GS、MSタイトルの支配率</Link>
             </li>
-            <li>
-              <Link href="/actix/">xx. Actix Webからデータ取得</Link>
-            </li>
           </ul>
         </nav>
       </main>

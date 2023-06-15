@@ -6,11 +6,7 @@ import PageHeader from '../../components/page-header'
 import Meta from '../../components/meta'
 
 import styles from "../../styles/styles.module.css"
-
-type User = {
-  id: number,
-  name: string
-}
+import Loading from '../../components/loading'
 
 const PageActix = () => {
   const fetchData = async () => {
@@ -44,11 +40,7 @@ const PageActix = () => {
           <>
             {isLoading
               ? (
-                <>
-                  <h3>データ取得中...</h3>
-                  <p>開発期間中につき、Saasの無料プランを利用しています。</p>
-                  <p>サーバー立ち上げまで1分ほどかかります。もう少々お待ちください🙏</p>
-                </>
+                <Loading />
               ): (
                 <Chart data={data} />
               )}
