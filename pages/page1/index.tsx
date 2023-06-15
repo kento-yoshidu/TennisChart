@@ -6,14 +6,15 @@ import Layout from "../../components/layout"
 import styles from "../../styles/styles.module.css"
 import PageHeader from "../../components/page-header"
 import Meta from "../../components/meta"
+import Loading from "../../components/loading"
 
 const Page1 = () => {
   const fetchData = async () => {
-    const res = await fetch("/api/api1")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/gs1`)
     return res.json()
   }
 
-  const { data, isLoading } = useQuery("data1", fetchData)
+  const { data, isLoading, error } = useQuery("data1", fetchData)
 
   return (
     <>
@@ -34,11 +35,13 @@ const Page1 = () => {
 
           <p>期間中に開催されたGSは80大会あり、そのうちBIG4が獲得したタイトルは<strong>67</strong>に及び、獲得率は<strong>83.75%</strong>です。</p>
 
+          {error && <p>エラーが発生しました。</p>}
+
           {isLoading
             ? (
-              <p>Loading...</p>
+              <Loading />
             ) : (
-              <Chart data={data.data1}/>
+              <Chart data={data}/>
             )
           }
 
