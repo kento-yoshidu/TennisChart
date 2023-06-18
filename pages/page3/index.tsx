@@ -11,32 +11,34 @@ const Page3 = () => {
     return res.json()
   }
 
-  const { data, isLoading } = useQuery("data3", fetchData)
+  const { data, isLoading, error } = useQuery("data3", fetchData)
 
   return (
-  <>
-    <Meta
-      pageTitle="3. GS、MSタイトルの支配率"
-      pageDesc="description"
-    />
-
-    <Layout>
-      <PageHeader
-        title="2. GS、MSタイトルの支配率"
-        post="2023年6月4日"
-        update="23023年6月5日"
+    <>
+      <Meta
+        pageTitle="3. GS、MSタイトルの支配率"
+        pageDesc="description"
       />
 
-      <p>MSが入っている分、支配率は少し下がっています。</p>
+      <Layout>
+        <PageHeader
+          title="2. GS、MSタイトルの支配率"
+          post="2023年6月4日"
+          update="23023年6月5日"
+        />
 
-      {isLoading
-        ? (
-          <p>loading...</p>
-        ) : (
-          <Chart data={data.data2}/>
-        )}
-    </Layout>
-  </>
+        <p>MSが入っている分、支配率は少し下がっています。</p>
+
+        {error && <p>エラーが発生しました。</p>}
+
+        {!error && isLoading
+          ? (
+            <p>loading...</p>
+          ) : (
+            <Chart data={data.data2}/>
+          )}
+      </Layout>
+    </>
   )
 }
 
