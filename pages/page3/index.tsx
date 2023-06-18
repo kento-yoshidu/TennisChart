@@ -7,7 +7,7 @@ import Meta from '../../components/meta'
 
 const Page3 = () => {
   const fetchData = async () => {
-    const res = await fetch("/api/api3")
+    const res = await fetch("/api/api_xxx")
     return res.json()
   }
 
