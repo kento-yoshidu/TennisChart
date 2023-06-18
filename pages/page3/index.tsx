@@ -7,7 +7,7 @@ import Meta from '../../components/meta'
 
 const Page3 = () => {
   const fetchData = async () => {
-    const res = await fetch("/api/api2")
+    const res = await fetch("/api/api3")
     return res.json()
   }
 
@@ -22,20 +22,24 @@ const Page3 = () => {
 
       <Layout>
         <PageHeader
-          title="2. GS、MSタイトルの支配率"
+          title="3. GS、MSタイトルの支配率"
           post="2023年6月4日"
-          update="23023年6月5日"
+          update="23023年6月18日"
         />
 
         <p>MSが入っている分、支配率は少し下がっています。</p>
 
-        {error && <p>エラーが発生しました。</p>}
 
-        {!error && isLoading
+        {isLoading
           ? (
             <p>loading...</p>
           ) : (
-            <Chart data={data.data2}/>
+            <>
+              {error
+                ? <p>エラーが発生しました。</p>
+                : <Chart data={data.data2}/>
+              }
+            </>
           )}
       </Layout>
     </>
