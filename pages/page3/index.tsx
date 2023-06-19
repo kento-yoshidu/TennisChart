@@ -7,7 +7,8 @@ import Meta from '../../components/meta'
 
 const Page3 = () => {
   const fetchData = async () => {
-    const res = await fetch(`http://localhost:8888/gsms`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/gsms`)
+    // const res = await fetch(`http://localhost:8888/gsms`)
     return res.json()
   }
 

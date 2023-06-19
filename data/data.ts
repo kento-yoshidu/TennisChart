@@ -10,22 +10,6 @@ export type DataType1 = {
 // GSとMS優勝回数
 export const data3: DataType1[] = [
   {
-    year: '2003',
-    "roger_federer": 2,
-    "rafael_nadal": 0,
-    "novak_dokovic": 0,
-    "andy_murray": 0,
-    "other": 12
-  },
-  {
-    year: '2004',
-    "roger_federer": 6,
-    "rafael_nadal": 0,
-    "novak_dokovic": 0,
-    "andy_murray": 0,
-    "other": 8
-  },
-  {
     year: '2005',
     "roger_federer": 6,
     "rafael_nadal": 5,
