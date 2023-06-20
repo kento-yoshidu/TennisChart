@@ -3,7 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 
 import styles from "../styles/chart.module.css"
 
-import type { DataType1 } from '../data/data'
+import type { DataType1 } from '../types/type'
 
 const Chart = ({ data }: { data: DataType1[] }) => {
   console.log(data)
